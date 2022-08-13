@@ -1,0 +1,43 @@
+body {
+    background-color: #244b5a;
+    /* background-image: url('./../img/bk-thot-04.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+body nav {
+    background-color: #161616 !important;
+    color: #fff !important;
+    /* opacity: 0.6; */
+}
+
+body nav a {
+    /* font-size: 1.2rem; */
+    color: #fff !important;
+    opacity: 1;
+}
+
+.card {
+    margin-top: 100px;
+}
+
+.btn-ml {
+    background-color: #93d500;
+    color: #000 !important;
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    background-color: #93d500;
+    color: #000 !important;
+}
+
+.dropdown-menu .dropdown-item-ml {
+    background-color: #93d500;
+    color: #000 !important;
+}
+
+.dropdown-menu a.dropdown-item {
+    background-color: #93d500;
+    color: #000 !important;
+}

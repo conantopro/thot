@@ -1,0 +1,52 @@
+body {
+    /*  */
+}
+
+/* .main-sidebar {
+    background-color: #244b5a;
+    color: #fff
+} */
+
+.nav-sidebar>.nav-item:hover {
+    /* background-color: #93d500; */
+}
+
+/* .content-wrapper {
+    background-color: #244b5a;
+} */
+
+/* body nav {
+    background-color: #161616 !important;
+    color: #fff !important;
+} */
+
+/* 
+body nav a {
+    color: #fff !important;
+    opacity: 1;
+}
+
+.card {
+    margin-top: 100px;
+} */
+
+.btn-ml {
+    background-color: #93d500;
+    color: #000 !important;
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    background-color: #93d500;
+    color: #000 !important;
+}
+
+.dropdown-menu .dropdown-item-ml {
+    background-color: #93d500;
+    color: #000 !important;
+}
+
+.dropdown-menu a.dropdown-item {
+    background-color: #93d500;
+    color: #000 !important;
+}

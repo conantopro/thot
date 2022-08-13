@@ -25,9 +25,7 @@
                                     <thead>
                                         <tr>
                                             <th>Nombre</th>
-                                            <th>Usuario</th>
                                             <th>Email</th>
-                                            <th>Rol</th>
                                             <th class="text-right">Acciones</th>
                                         </tr>
                                     </thead>
@@ -35,17 +33,16 @@
                                         @foreach ($users as $user)
                                             <tr>
                                                 <td>{{ $user->name }}</td>
-                                                <td>{{ $user->username }}</td>
                                                 <td>{{ $user->email }}</td>
-                                                <td>
+                                                {{-- <td>
                                                     @forelse ($user->roles as $role)
                                                         <span class="badge badge-pill badge-success permission-badge">{{ $role->name }}</span>
                                                     @empty
                                                         <span class="badge badge-pill badge-danger permission-badge">No tiene rol asignado</span>
                                                     @endforelse
-                                                </td>
+                                                </td> --}}
                                                 <td class="text-right">
-                                                    @can('user_show')
+                                                    {{-- @can('user_show')
                                                         <a href="{{ route('users.show', $user->id) }}" class="btn btn-xs btn-success"><i class="fa fa-eye"></i></a>
                                                     @endcan
                                                     @can('user_edit')
@@ -55,7 +52,7 @@
                                                         <button type="submit" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#deleteModal" data-id="{{ $user->id }}" data-name="{{ $user->name }}">
                                                             <i class="fa fa-times"></i>
                                                         </button>
-                                                    @endcan
+                                                    @endcan --}}
                                                     
                                                 </td>
                                             </tr>
@@ -64,9 +61,7 @@
                                     <tfoot>
                                     <tr>
                                         <th>Nombre</th>
-                                        <th>Usuario</th>
                                         <th>Email</th>
-                                        <th>Rol</th>
                                         <th class="text-right">Acciones</th>
                                     </tr>
                                     </tfoot>

@@ -21,6 +21,14 @@ return [
         'scheme' => 'https',
     ],
 
+    'tcc' => [
+        'base_uri' => env('TCC_BASE_URI'),
+        'client_id' => env('TCC_CLIENT_ID'),
+        'client_secret' => env('TCC_CLIENT_SECRET'),
+        'password_client_id' => env('TCC_PASSWORD_CLIENT_ID'),
+        'password_client_secret' => env('TCC_PASSWORD_CLIENT_SECRET'),
+    ],
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],

@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('front.pages.start');
-});
+})->name('start');
 
 Route::group(['middleware' => 'auth'], function() {
     // Route::get('/start', [HomeController::class, 'start'])->name('start');
