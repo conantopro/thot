@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="{{ route('home') }}" class="brand-link">
         <img src="{{ asset('img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Thot</span>
+        <span class="brand-text font-weight-light">THOT</span>
         {{-- <span class="brand-text font-weight-light">AdminLTE 3</span> --}}
     </a>
 
@@ -11,7 +11,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="{{ asset('img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
+                <img src="{{ asset('img/user-profile-default.jpg') }}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
                 <a href="#" class="d-block">{{ Auth::user()->name }}</a>
@@ -36,17 +36,14 @@
                 <!-- Add icons to the links using the .nav-icon class
                         with font-awesome or any other icon font library -->
 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{ route('home') }}" class="nav-link {{ request()->is('home') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-home"></i>
-                        <p>
-                            Inicio
-                            {{-- <span class="right badge badge-danger">New</span> --}}
-                        </p>
+                        <p>Inicio</p>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
-                    <a href="{{ route('dashboard') }}" class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}">
+                    <a href="{{ route('home') }}" class="nav-link {{ request()->is('home') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Panel de Control
@@ -55,7 +52,7 @@
                     </a>
                 </li>
                 {{-- @can('company_index') --}}
-                    <li class="nav-item {{ request()->is('companies*') ? 'menu-open' : '' }}">
+                    {{-- <li class="nav-item {{ request()->is('companies*') ? 'menu-open' : '' }}">
                         <a href="#" class="nav-link {{ request()->is('companies*') ? 'active' : '' }}">
                             <i class="nav-icon fas fa-building"></i>
                             <p>
@@ -66,7 +63,6 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="/companies" class="nav-link {{ request()->is('companies') ? 'active' : '' }}">
-                                    {{-- <i class="far fa-circle nav-icon"></i> --}}
                                     <i class="nav-icon fas fa-ellipsis-h"></i>
                                     <p>Ver Empresas</p>
                                 </a>
@@ -78,7 +74,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
                 {{-- @endcan --}}
                 {{-- <li class="nav-item menu-open"> --}}
                 {{-- @can('user_index') --}}
@@ -107,6 +103,77 @@
                         </ul>
                     </li>
                 {{-- @endcan --}}
+
+                <li class="nav-item {{ request()->is('operations*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('operations*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-truck"></i>
+                        <p>
+                            Operaciones
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('operations.courier.index') }}" class="nav-link {{ request()->is('operations/courier') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-ellipsis-h"></i>
+                                <p>Courier</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link {{ request()->is('operations/masive') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-ellipsis-h"></i>
+                                <p>Masivos</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link {{ request()->is('operations/semimasive') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-ellipsis-h"></i>
+                                <p>Semimasivos</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link {{ request()->is('operations/urban') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-ellipsis-h"></i>
+                                <p>Urbanos</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link {{ request()->is('operations/specials') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-ellipsis-h"></i>
+                                <p>Especiales</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item {{ request()->is('alliances*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('alliances*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-handshake"></i>
+                        <p>
+                            Alianzas
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('tcc-rates-paq.index') }}" class="nav-link {{ request()->is('alliances/tcc/rates-paq') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-ellipsis-h"></i>
+                                <p>TCC - Paquetería</p>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </li>
+
+                <li class="nav-item {{ request()->is('alliances*') ? 'menu-open' : '' }}">
+                    <a href="{{ route('reports.index') }}" class="nav-link {{ request()->is('reports*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <p>
+                            Reportes
+                            {{-- <i class="right fas fa-angle-left"></i> --}}
+                        </p>
+                    </a>
+                </li>
 
                 @can('permission_index')
                     <li class="nav-item {{ request()->is('permissions*') ? 'menu-open' : '' }}">

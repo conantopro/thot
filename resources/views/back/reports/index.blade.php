@@ -4,7 +4,7 @@
     <div class="content-wrapper">
         <div class="content">
             <div class="container-fluid">
-                <div class="row mt-4">
+                {{-- <div class="row mt-4">
                     <div class="col-lg-3 col-6">
                         <div class="small-box bg-info">
                             <div class="inner">
@@ -57,11 +57,9 @@
                             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-
-                
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col-md-6">
                         <div class="card card-primary">
                             <div class="card-header">
