@@ -29,6 +29,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="card">
@@ -52,13 +53,21 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($estados as $estado)
+                                            @if (isset($estados['codigo']))
                                                 <tr>
-                                                    <td>{{ $estado['codigo'] }}</td>
-                                                    <td>{{ $estado['descripcion'] }}</td>
-                                                    <td>{{ $estado['fecha'] }}</td>
+                                                    <td>{{ $estados['codigo'] }}</td>
+                                                    <td>{{ $estados['descripcion'] }}</td>
+                                                    <td>{{ $estados['fecha'] }}</td>
                                                 </tr>
-                                            @endforeach
+                                            @else
+                                                @foreach ($estados as $estado)
+                                                    <tr>
+                                                        <td>{{ $estado['codigo'] }}</td>
+                                                        <td>{{ $estado['descripcion'] }}</td>
+                                                        <td>{{ $estado['fecha'] }}</td>
+                                                    </tr>
+                                                @endforeach
+                                            @endif
                                         </tbody>
                                     </table>
                                 @endif
@@ -89,14 +98,25 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($novedades as $novedad)
+                                            
+
+                                            @if (isset($novedades['codigonovedad']))
                                                 <tr>
-                                                    <td>{{ $novedad['codigonovedad'] }}</td>
-                                                    <td>{{ $novedad['fechanovedad'] }}</td>
-                                                    <td>{{ $novedad['novedad'] }}</td>
-                                                    <td>{{ $novedad['estadonovedad'] }}</td>
+                                                    <td>{{ $novedades['codigonovedad'] }}</td>
+                                                    <td>{{ $novedades['fechanovedad'] }}</td>
+                                                    <td>{{ $novedades['novedad'] }}</td>
+                                                    <td>{{ $novedades['estadonovedad'] }}</td>
                                                 </tr>
-                                            @endforeach
+                                            @else
+                                                @foreach ($novedades as $novedad)
+                                                    <tr>
+                                                        <td>{{ $novedad['codigonovedad'] }}</td>
+                                                        <td>{{ $novedad['fechanovedad'] }}</td>
+                                                        <td>{{ $novedad['novedad'] }}</td>
+                                                        <td>{{ $novedad['estadonovedad'] }}</td>
+                                                    </tr>
+                                                @endforeach
+                                            @endif
                                         </tbody>
                                     </table>
                                 @endif
